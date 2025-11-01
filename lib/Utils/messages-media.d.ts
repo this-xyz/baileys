@@ -33,11 +33,7 @@ export declare function getAudioDuration(buffer: Buffer | string | Readable): Pr
 /**
   referenced from and modifying https://github.com/wppconnect-team/wa-js/blob/main/src/chat/functions/prepareAudioWaveform.ts
  */
-export declare function getAudioWaveform(
-  buffer: Buffer | string | Readable,
-  logger?: ILogger
-): Promise<Uint8Array | undefined>;
-
+export declare function getAudioWaveform(buffer: Buffer | string | Readable, logger?: ILogger): Promise<Uint8Array<ArrayBuffer> | undefined>;
 export declare const toReadable: (buffer: Buffer) => Readable;
 export declare const toBuffer: (stream: Readable) => Promise<Buffer<ArrayBuffer>>;
 export declare const getStream: (item: WAMediaUpload, opts?: AxiosRequestConfig) => Promise<{
