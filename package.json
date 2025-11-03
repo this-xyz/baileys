@@ -46,7 +46,7 @@
     "ws": "^8.13.0"
   },
   "devDependencies": {
-    "@whiskeysockets/eslint-config": "^1.0.0",
+    "@adiwajshing/eslint-config": "github:adiwajshing/eslint-config",
     "@types/got": "^9.6.11",
     "@types/jest": "^27.5.1",
     "@types/node": "^16.18.126",
