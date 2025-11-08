@@ -21,8 +21,21 @@
     "WAProto/*"
   ],
   "scripts": {
-    "lint": "eslint lib --ext .js,.ts,.jsx,.tsx",
-    "lint:fix": "eslint lib --fix --ext .js,.ts,.jsx,.tsx"
+    "build:all": "tsc && typedoc",
+    "build:docs": "typedoc",
+    "build:tsc": "tsc",
+    "changelog:last": "conventional-changelog -p angular -r 2",
+    "changelog:preview": "conventional-changelog -p angular -u",
+    "changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "example": "node --inspect -r ts-node/register Example/example.ts",
+    "gen:protobuf": "sh WAProto/GenerateStatics.sh",
+    "lint": "eslint src --ext .js,.ts,.jsx,.tsx",
+    "lint:fix": "eslint src --fix --ext .js,.ts,.jsx,.tsx",
+    "prepack": "tsc",
+    "prepare": "tsc",
+    "preinstall": "node ./engine-requirements.js",
+    "release": "release-it",
+    "test": "jest"
   },
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
@@ -49,8 +62,8 @@
     "@types/sharp": "^0.29.4",
     "@types/ws": "^8.0.0",
     "conventional-changelog-cli": "^2.2.2",
-    "eslint": "^8.0.0",
-    "jest": "^27.0.6",
+    "eslint": "^9.31.0",
+    "jest": "^29.7.0",
     "jimp": "^0.16.1",
     "json": "^11.0.0",
     "link-preview-js": "^3.0.0",
@@ -58,7 +71,7 @@
     "qrcode-terminal": "^0.12.0",
     "release-it": "^15.10.3",
     "sharp": "^0.34.1",
-    "ts-jest": "^27.0.3",
+    "ts-jest": "^29.2.5",
     "ts-node": "^10.8.1",
     "typedoc": "^0.27.9",
     "typescript": "^5.8.2"
